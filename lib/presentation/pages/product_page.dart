@@ -18,7 +18,7 @@ class ProductProvider extends ChangeNotifier {
     Product(name: 'Memória RAM SODIMM 512MB', price: 3499.99),
     Product(name: 'Processador AMD Athlon', price: 8599.99),
     Product(name: 'Monitor ITAU TEC', price: 2099.99),
-    Product(name: 'Kit teclado e mouse gamer KNUP', price: 849.99),
+    Product(name: 'Kit teclado e mouse gamer KNUPP', price: 849.99),
   ];
 
   List<Product> get products => _products;
@@ -48,7 +48,7 @@ class ProductPage extends StatelessWidget {
                 final product = provider.products[index];
                 return ListTile(
                   title: Text(product.name),
-                  subtitle: Text('\$R${product.price.toStringAsFixed(2)}'),
+                  subtitle: Text('R\$ ${product.price.toStringAsFixed(2)}'),
                   trailing: IconButton(
                     icon: Icon(
                       product.favorite ? Icons.favorite : Icons.favorite_border,
