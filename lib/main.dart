@@ -5,6 +5,8 @@ import 'package:provider/provider.dart' as provider;
 import 'presentation/pages/home_page.dart';
 import 'state/provider/counter_provider.dart';
 
+import 'presentation/pages/product_page.dart';
+
 void main() {
   runApp(
     ProviderScope(
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'State Management Patterns',
-      home: const HomePage(),
+      home: const ProductPage(),
     );
   }
 }
