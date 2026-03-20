@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'provider_page.dart';
-import 'riverpod_page.dart';
-import 'bloc_page.dart';
+import 'product_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,33 +8,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("State Management Examples")),
+      appBar: AppBar(title: const Text("Home")),
       body: ListView(
         children: [
           ListTile(
-            title: const Text("Provider Example"),
+            title: const Text("Produtos"),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => const ProviderPage()),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text("Riverpod Example"),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const RiverpodPage()),
-              );
-            },
-          ),
-          ListTile(
-            title: const Text("BLoC Example"),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const BlocPage()),
+                MaterialPageRoute(builder: (_) => const ProductPage()),
               );
             },
           ),
